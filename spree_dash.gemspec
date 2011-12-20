@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.description = 'Required dependency for Spree'
 
   s.required_ruby_version = '>= 1.8.7'
-  s.author      = 'Brian Quinn'
-  s.email       = 'brian@railsdog.com'
+  s.author      = 'Chris Mar'
+  s.email       = 'chris@spreecommerce.com'
   s.homepage    = 'http://spreecommerce.com'
 
   s.files        = Dir['LICENSE', 'README.md', 'app/**/*', 'config/**/*', 'lib/**/*', 'db/**/*', 'vendor/**/*']
