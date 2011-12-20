@@ -1,10 +1,10 @@
 # encoding: UTF-8
-version = File.read(File.expand_path("../../SPREE_VERSION", __FILE__)).strip
+version = '1.0.0'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_dash'
-  s.version     = version
+  s.version     = '1.0.0.beta'
   s.summary     = 'Overview dashboard for use with Spree.'
   s.description = 'Required dependency for Spree'
 
@@ -17,5 +17,5 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', version
+  s.add_dependency 'spree_core', '>= 1.0.0.beta'
 end
