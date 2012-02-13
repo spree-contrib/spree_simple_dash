@@ -11,7 +11,7 @@ Installation
 Add to your gem file after spree
 
     gem 'spree'
-    gem 'spree_dash', :git => 'git@github.com:spree/spree_dash.git'
+    gem 'spree_simple_dash', :git => 'git@github.com:spree/spree_simple_dash.git'
 
 Testing
 -------

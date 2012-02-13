@@ -3,7 +3,7 @@ version = '1.0.0'
 
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_dash'
+  s.name        = 'spree_simple_dash'
   s.version     = '1.0.0.beta'
   s.summary     = 'Overview dashboard for use with Spree.'
   s.description = 'Required dependency for Spree'
