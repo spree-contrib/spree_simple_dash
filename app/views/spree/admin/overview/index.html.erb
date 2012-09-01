@@ -63,12 +63,6 @@
                 <label id="orders_adjustment_total"><%= number_with_delimiter @orders_adjustment_total.to_i %></label>
                 <span><%= t(:adjustments) %></span>
               </td>
-              <td class="spacer">|</td>
-              <td style="width:22%;">
-                <p><%= t('number.currency.format.unit') %></p>
-                <label id="orders_adjustment_total"><%= number_with_delimiter @orders_credit_total.to_i %></label>
-                <span><%= t(:credits) %></span>
-              </td>
             </tr>
           </table>
 
