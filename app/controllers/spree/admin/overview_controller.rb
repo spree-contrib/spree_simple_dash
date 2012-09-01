@@ -13,7 +13,6 @@ class Spree::Admin::OverviewController < Spree::Admin::BaseController
     @orders_line_total = orders_line_total(p)
     @orders_total = orders_total(p)
     @orders_adjustment_total = orders_adjustment_total(p)
-    @orders_credit_total = orders_credit_total(p)
 
     @best_selling_variants = best_selling_variants
     @top_grossing_variants = top_grossing_variants
@@ -42,7 +41,7 @@ class Spree::Admin::OverviewController < Spree::Admin::BaseController
         render :js => '[[' + orders_by_day(opts).map { |day| "['#{day[0]}',#{day[1]}]" }.join(',') + ']]'
       when 'orders_totals'
         render :js => [:orders_total => orders_total(opts).to_i, :orders_line_total => orders_line_total(opts).to_i,
-          :orders_adjustment_total => orders_adjustment_total(opts).to_i, :orders_credit_total => orders_credit_total(opts).to_i ].to_json
+          :orders_adjustment_total => orders_adjustment_total(opts).to_i].to_json
     end
   end
 
@@ -91,10 +90,6 @@ class Spree::Admin::OverviewController < Spree::Admin::BaseController
 
     def orders_adjustment_total(params)
       Spree::Order.sum(:adjustment_total, :conditions => conditions(params))
-    end
-
-    def orders_credit_total(params)
-      Spree::Order.sum(:credit_total, :conditions => conditions(params))
     end
 
     def best_selling_variants
